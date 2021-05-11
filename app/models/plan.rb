@@ -1,3 +1,3 @@
 class Plan < ApplicationRecord
-    has_many :worksouts 
+    has_many :workouts 
 end
