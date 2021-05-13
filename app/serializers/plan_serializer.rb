@@ -1,3 +1,3 @@
 class PlanSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :goal
 end
