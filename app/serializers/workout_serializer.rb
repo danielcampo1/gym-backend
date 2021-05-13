@@ -1,3 +1,5 @@
 class WorkoutSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :muscle_group, :day, :name, :duration
+  
+  belongs_to :plan
 end
