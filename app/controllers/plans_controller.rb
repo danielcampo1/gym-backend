@@ -16,6 +16,7 @@ class PlansController < ApplicationController
   # POST /plans
   def create
     @plan = Plan.new(plan_params)
+    
     if @plan.save
       render json: @plan, status: :created, location: @plan
     else
