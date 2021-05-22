@@ -4,7 +4,7 @@ class WorkoutsController < ApplicationController
   # GET /workouts
   def index
     @workouts = Workout.all
-
+    
     render json: @workouts
   end
 
