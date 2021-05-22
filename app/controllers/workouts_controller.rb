@@ -15,7 +15,7 @@ class WorkoutsController < ApplicationController
 
   # POST /workouts
   def create
-    @workout = Workout.new(workout_params)
+    @workout = @plan.workout.new(workout_params)
 
     if @workout.save
       render json: @workout, status: :created, location: @workout
