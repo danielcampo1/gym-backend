@@ -15,10 +15,11 @@ class WorkoutsController < ApplicationController
 
   # POST /workouts
   def create
-    @workout = @plan.workout.new(workout_params)
+    binding.pry
+    @workout = @plan.workouts.new(workout_params)
 
     if @workout.save
-      render json: @workout, status: :created, location: @workout
+      render json: @plan
     else
       render json: @workout.errors, status: :unprocessable_entity
     end
