@@ -15,7 +15,7 @@ class WorkoutsController < ApplicationController
 
   # POST /workouts
   def create
-    binding.pry
+    @plan = Plan.find(params[:plan_id])
     @workout = @plan.workouts.new(workout_params)
 
     if @workout.save
