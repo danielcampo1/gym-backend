@@ -19,7 +19,7 @@ class WorkoutsController < ApplicationController
     @workout = @plan.workouts.new(workout_params)
 
     if @workout.save
-      render json: @plan
+      render json: @workout
     else
       render json: @workout.errors, status: :unprocessable_entity
     end
